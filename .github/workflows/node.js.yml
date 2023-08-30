@@ -13,6 +13,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
+      S3_BUCKET: 4tar1p
+      CLOUDFRONT_DISTRIBUTION_ID: E2TZWG0G5KA5JE 
       CI: false  # true시 warning까지 에러로 출력
 
     # Nodejs 런타임 정보 설정  
@@ -34,9 +36,16 @@ jobs:
       - name: 4. Build                   # React Build
         run: yarn build
 
-      - name: Deploy                  # Upload build file to S3
+      - name: 5. Deploy to S3
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          aws s3 cp --recursive --region ap-northeast-2 build s3://4tar1p-frontend-github-actions-s3-bucket
+          aws s3 cp --recursive --region ap-northeast-2 build s3://${{ env.S3_BUCKET }} 
+
+      - name: 6. Invalidate CloudFront Cache
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ env.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"       
