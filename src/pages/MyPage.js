@@ -10,7 +10,7 @@ const MyPage = () => {
     <div className="page">
       <Header title="마이페이지" />
       <div className="mypage_wrapper">
-        <div className="home_title">{`유진님!\n지금까지 총 3.5만원 할인 받으셨네요!`}</div>
+        <div className="home_title">{`상암동 물개 🦭 유진님!\n지금까지 총 3.5만원 할인 받으셨네요!`}</div>
         <RadiusRect
           backgroundColor="#609966"
           color="white"
@@ -32,7 +32,7 @@ const MyPage = () => {
               style={{
                 display: 'grid',
                 gridTemplateColumns: '1fr 1fr',
-                marginBottom: '8px'
+                marginBottom: '8px',
               }}
             >
               <div style={{ fontSize: '17px', textAlign: 'center' }}>
@@ -45,7 +45,7 @@ const MyPage = () => {
             <div
               style={{
                 display: 'grid',
-                gridTemplateColumns: '1fr 1fr 1fr'
+                gridTemplateColumns: '1fr 1fr 1fr',
               }}
             >
               <div style={{ fontSize: '15px', textAlign: 'center' }}>
@@ -53,10 +53,10 @@ const MyPage = () => {
               </div>
               <div style={{ fontSize: '15px', textAlign: 'center' }}>
                 복싱 1/3
-              </div>     
+              </div>
               <div style={{ fontSize: '15px', textAlign: 'center' }}>
                 수영 1/5
-              </div>        
+              </div>
             </div>
           </div>
         </RadiusRect>
