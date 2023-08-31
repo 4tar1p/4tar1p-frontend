@@ -2,6 +2,7 @@ import { React } from 'react';
 import { test, getSubscriptionRervation } from 'api/api';
 import './styles/MyPage.css'; 
 import { useDispatch } from 'react-redux';
+import { regionList } from 'constants/constants';
 
 const MyPage = () => {
   const dispatch = useDispatch();

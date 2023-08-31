@@ -1,22 +1,30 @@
 /* Home.css */
-.homeContainer {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+.home {
+    padding: 10px;
+}
+
+.mainButton{
+    margin-left: auto;
+    margin-right: auto;
+    height: 70px;
+    margin: 20px;
 }
 
 .homeTitle {
-    font-size: 3em;
-}
-
-.progressTitle {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
+    margin: 1%;
 }
 
-.navBarPosition {
-    position: absolute;
-    bottom: 10px;
+
+.contents_box_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+
 }
+.contentsBox{
+    background-color: lightgray;
+    text-align: center;
+     margin: 10px;
+}
+
