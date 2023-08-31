@@ -39,19 +39,6 @@
   padding-right: 10px;
 }
 
-/* button {
-  display: inline-block;
-  background-color: #6adfa0;
-  padding: 5px 10px;
-  border-radius: 15px;
-  color: white;
-  font-weight: bold;
-  border: none;
-  font-size: 1.5em;
-} */
-
-
-/* select {
 select {
   padding: 10px;
   font-size: 1em;
@@ -82,7 +69,6 @@ hr {
 .increase-decrease-count {
   display: inline-flex;
 }
-
 .total-container {
   display: flex;
   justify-content: space-between;
