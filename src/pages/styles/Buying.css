@@ -39,29 +39,13 @@
   padding-right: 10px;
 }
 
-<<<<<<< .merge_file_RdjVuR
-/* button {
-  display: inline-block;
-  background-color: #6adfa0;
-  padding: 5px 10px;
-  border-radius: 15px;
-  color: white;
-  font-weight: bold;
-  border: none;
-  font-size: 1.5em;
-} */
-
-
-/* select {
-=======
 select {
->>>>>>> .merge_file_1qIyRN
   padding: 10px;
   font-size: 1em;
   margin-top: 50px;
   margin-bottom: 10px;
   width: 100%;
-} */
+}
 
 .countAlertMessage {
   display: block;
@@ -85,9 +69,6 @@ hr {
 .increase-decrease-count {
   display: inline-flex;
 }
-<<<<<<< .merge_file_RdjVuR
-=======
-
 .total-container {
   display: flex;
   justify-content: space-between;
@@ -95,4 +76,3 @@ hr {
   padding-right: 10px;
   /* grid-template-columns: 1fr 1fr; */
 }
->>>>>>> .merge_file_1qIyRN
