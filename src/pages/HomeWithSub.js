@@ -30,6 +30,7 @@ const HomeWithSub = () => {
         </RadiusRect>
         <div className="home_title">이런 헬스 컨텐츠는 어때요? 🏋️</div>
         {/* 헬스 컨텐츠 */}
+        <div style={{maxHeight:'700px', overflowY:'auto'}}>
         <div className="health_contents_wrapper">
           <CurationCard
             size="m"
@@ -55,6 +56,7 @@ const HomeWithSub = () => {
             imgSrc={'/healthy_2_04.png'}
             bgColor="#CFBA92"
           />
+        </div>
         </div>
       </div>
     </div>
