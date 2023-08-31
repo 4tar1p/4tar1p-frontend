@@ -7,6 +7,7 @@ import RadiusRect from 'components/RadiusRect';
 import Header from 'components/Header';
 import { useAppDispatch, useAppSelector } from 'app/hooks';
 import { changeSelected } from 'features/reservation/reservation';
+import { tennisFacillityList } from 'constants/constants';
 
 const Reservation = () => {
   const dispatch = useAppDispatch();
@@ -42,9 +43,16 @@ const Reservation = () => {
         <div className="title">운동</div>
         <select className="reservation_sports_wrapper">
           {sportsList.map((sports, i) => {
-            return <option key={i}>{sports.name}</option>;
+            if (i < 3) return <option key={i}>{sports.name}</option>;
           })}
         </select>
+        <div className="title">장소</div>
+        <select className="reservation_sports_wrapper">
+          {tennisFacillityList.map((facillity, i) => {
+            return <option key={i}>{facillity}</option>;
+          })}
+        </select>
+
         <div className="title">시간</div>
         <div className="time_btn_wrapper">
           {timeList.map((time, i) => {
