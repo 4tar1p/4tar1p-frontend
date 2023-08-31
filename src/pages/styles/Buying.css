@@ -2,16 +2,21 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+.sports_card_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .sports_card {
-  width: 90px;
-  height: 90px;
   text-align: center;
+  margin: 10px;
 }
 
 .sports_img {
   width: 72px;
   height: 72px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 
 .sports_name {
@@ -30,6 +35,8 @@
 .cnt_btn {
   width: 20px;
   height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 button {
@@ -46,4 +53,26 @@ button {
 select {
   padding: 10px;
   font-size: 1em;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  width: 100%;
 }
+
+.countAlertMessage {
+  color: red;
+  display: block;
+}
+
+.countAlertMessage-hide {
+  display: none;
+}
+
+/* .selected-sports-div {
+  display: inline-block;
+  text-align: center;
+} */
+
+.increase-decrease-count {
+  display: inline-flex;
+}
+
