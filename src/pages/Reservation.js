@@ -71,6 +71,23 @@ const Reservation = () => {
           })}
         </div>
       </div>
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr 1fr',
+          marginTop: '35px'
+        }}
+      >
+        <div style={{ fontSize: '15px', textAlign: 'center' }}>
+          테니스 1/2
+        </div>
+        <div style={{ fontSize: '15px', textAlign: 'center' }}>
+          복싱 1/3
+        </div>     
+        <div style={{ fontSize: '15px', textAlign: 'center' }}>
+          수영 1/5
+        </div>        
+      </div>
       <div style={{ margin: 'auto 20px 10px 20px' }}>
         <RadiusRect
           width="100%"
