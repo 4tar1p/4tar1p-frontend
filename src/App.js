@@ -32,11 +32,7 @@ function App() {
       <Route path="*" element={<NotFound />}></Route>
       <Route path="/buyingcompletion" element={<BuyingCompletion />}></Route>
       <Route path="/reservation" element={<Reservation />}></Route>
-
-      <Route
-        path="/reservationcompletion"
-        element={<ReservationCompletion />}
-      ></Route>
+      <Route path="/reservationcompletion" element={<ReservationCompletion />} ></Route>
       <Route path="/mypage" element={<MyPage />}></Route>
     </Routes>
   );
