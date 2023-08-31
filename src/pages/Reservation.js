@@ -17,7 +17,7 @@ const Reservation = () => {
   const { sportsList } = useAppSelector((state) => state.buying);
   const { selected } = useAppSelector((state) => state.reservation);
 
-  const timeList = ['12:00', '12:30', '13:30', '15:00'];
+  const timeList = ['18:00', '18:30', '19:00', '19:30', '20:00', '20:30'];
 
   const handleReserve = () => {
     navigate('/reservationcompletion');
