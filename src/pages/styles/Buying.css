@@ -39,7 +39,6 @@
   padding-right: 10px;
 }
 
-<<<<<<< .merge_file_RdjVuR
 /* button {
   display: inline-block;
   background-color: #6adfa0;
@@ -53,9 +52,7 @@
 
 
 /* select {
-=======
 select {
->>>>>>> .merge_file_1qIyRN
   padding: 10px;
   font-size: 1em;
   margin-top: 50px;
@@ -85,8 +82,6 @@ hr {
 .increase-decrease-count {
   display: inline-flex;
 }
-<<<<<<< .merge_file_RdjVuR
-=======
 
 .total-container {
   display: flex;
@@ -95,4 +90,3 @@ hr {
   padding-right: 10px;
   /* grid-template-columns: 1fr 1fr; */
 }
->>>>>>> .merge_file_1qIyRN
