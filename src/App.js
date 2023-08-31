@@ -11,6 +11,7 @@ import MyPage from 'pages/MyPage';
 import BuyingCompletion from 'pages/BuyingCompletion';
 import ReservationCompletion from 'pages/ReservationCompletion';
 import Reservation from 'pages/Reservation';
+import 'react-calendar/dist/Calendar.css';
 
 function App() {
   return (
