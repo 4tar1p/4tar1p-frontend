@@ -41,13 +41,10 @@ const HomeWithoutSub = () => {
                 imgSrc={`/subpack_${i + 1}.png`}
               >
                 <div></div>
-                {subPack.attributes.map((attr, j) => {
-                  return (
-                    <div key={j} className="sub_pack_detail_sports_name">
-                      {attr.exercise}
-                    </div>
-                  );
-                })}
+                
+                <div key={i} className="sub_pack_detail_sports_name">
+                  {subPack.description}
+                </div>
               </CurationCard>
             );
           })}
