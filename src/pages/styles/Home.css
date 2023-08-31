@@ -11,6 +11,11 @@
     font-size: 3em;
 }
 
+.progressTitle {
+    font-size: 2em;
+    font-weight: bold;
+}
+
 .navBarPosition {
     position: absolute;
     bottom: 10px;
