@@ -60,13 +60,13 @@
   padding-right: 10px;
 }
 
-select {
+/* select {
   padding: 10px;
   font-size: 1em;
   margin-top: 50px;
   margin-bottom: 10px;
   width: 100%;
-}
+} */
 
 .countAlertMessage {
   display: block;
@@ -100,4 +100,14 @@ hr {
   padding-left: 10px;
   padding-right: 10px;
   /* grid-template-columns: 1fr 1fr; */
+}
+
+.reservation_sports_wrapper {
+  padding: 10px;
+  font-size: 1em;
+  /* margin-top: 50px; */
+  margin-bottom: 10px;
+  width: 100%;
+  border: 2px solid #609966;
+  border-radius: 10px;
 }

@@ -1,4 +1,13 @@
-export const regionList = [{ name: '홍대/마포/상수' }, { name: '종로/중구' }];
+export const regionList = [
+  { name: '홍대/마포/상수' }, 
+  { name: '종로/중구' },
+  {name: '잠실/송파/강동'},
+  {name: '영등포/여의도/강서'},
+  {name: '건대/성수/왕십리'},
+  {name: '용산/이태원/한남'},
+  {name: '성북/노원/중랑'},
+  {name: '구로/관악/동작'}
+];
 export const subPackList = [
   {
     name: '온더매트팩',
