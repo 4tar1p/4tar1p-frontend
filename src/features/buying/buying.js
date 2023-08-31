@@ -2,6 +2,9 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   step: 0,
+  totalPrice : 0,
+  totalOriginPrice: 0,
+  totalCount: 0,
   sportsList: [
     {
       id: 0,
@@ -120,9 +123,27 @@ const buyingSlice = createSlice({
         ),
       };
     },
+    setTotalPrice : (state, action) => {
+      return {
+        ...state,
+        totalPrice: state.totalPrice + action.payload
+      }
+    },
+    setTotalOriginPrice : (state, action) => {
+      return {
+        ...state,
+        totalOriginPrice: state.totalOriginPrice + action.payload
+      }
+    },
+    setTotalCount: (state, action) => {
+      return {
+        ...state,
+        totalCount: state.totalCount + action.payload
+      }
+    }
   },
 });
 
-export const { clickedNextStep, selectedSports, increaseCnt, decreaseCnt } =
+export const { clickedNextStep, selectedSports, increaseCnt, decreaseCnt, setTotalPrice, setTotalOriginPrice, setTotalCount } =
   buyingSlice.actions;
 export default buyingSlice.reducer;
