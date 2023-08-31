@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "eslint": "^8.48.0",
-    "prettier": "^3.0.2"
+    "prettier": "^3.0.2",
+    "@babel/plugin-proposal-private-property-in-object": "^7.x.x"
   }
 }
