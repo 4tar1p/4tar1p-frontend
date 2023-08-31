@@ -1,0 +1,22 @@
+/* Home.css */
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeTitle {
+    font-size: 3em;
+}
+
+.progressTitle {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.navBarPosition {
+    position: absolute;
+    bottom: 10px;
+}

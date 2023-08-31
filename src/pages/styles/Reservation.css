@@ -1,0 +1,22 @@
+/* styles/Reservation.css */
+
+/* button {
+  display: inline-block;
+  background-color: #6ADFA0;
+  padding: 5px 10px;
+  border-radius: 15px; 
+  color: white; 
+  font-weight: bold;  
+  border: none; 
+  font-size: 1.5em; /* 폰트 크기 H2랑 동일하게 */
+/* } */
+
+.title {
+  font-size: 18px;
+  font-weight: var(--semibold);
+}
+
+.time_btn_wrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
