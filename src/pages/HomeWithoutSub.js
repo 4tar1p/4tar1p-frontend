@@ -25,8 +25,8 @@ const HomeWithoutSub = () => {
       <div className="contents_box_wrapper">
       {subPackList.map((subPack, i) => {
             return (
-              <div key={i} className='contentsBox'>
-                  <p style={{fontWeight: 'bold'}}>{subPack.name}</p>
+              <div key={i} className='contents_box' style={{margin: '10px'}}>
+                  <div style={{fontWeight: 'bold', margin: '10px'}}>{subPack.name}</div>
                   {subPack.attributes.map((attr, j) => {
                     return (<p style={{margin: '5%'}} key={j}>{attr.exercise}</p>)
                   })}
