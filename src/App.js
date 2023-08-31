@@ -9,6 +9,7 @@ import NotFound from 'pages/NotFound';
 import MyPage from './pages/MyPage';
 import BuyingCompletion from './pages/BuyingCompletion';
 import ReservationCompletion from './pages/ReservationCompletion';
+import Reservation from 'pages/Reservation';
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
       <Route path="/api" element={<ApiTest />} />
       <Route path="*" element={<NotFound />}></Route>
       <Route path="/buyingcompletion" element={<BuyingCompletion />}></Route>
+      <Route path="/reservation" element={<Reservation />}></Route>
+
       <Route
         path="/reservationcompletion"
         element={<ReservationCompletion />}

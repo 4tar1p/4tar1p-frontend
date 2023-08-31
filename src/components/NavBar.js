@@ -15,7 +15,7 @@ const NavBar = ({ menuIdx }) => {
 
   const handleClick = (type) => {
     if (type === 'buying') navigate('/buying');
-    else if (type === 'reserve') navigate('/reservationcompletion');
+    else if (type === 'reserve') navigate('/reservation');
     else if (type === 'mypage') navigate('/mypage');
   };
 

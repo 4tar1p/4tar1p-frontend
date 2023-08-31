@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/MyPage.css'; 
+import './styles/MyPage.css';
 
 const MyPage = () => {
   const subscriptions = {
@@ -8,7 +8,7 @@ const MyPage = () => {
     usageCount: '3/10',
     exercises: '수영 2, 필라테스 2, 테니스 3, PT 2',
     locationGroup: '홍대/합정/마포',
-    autoRenew: 'Y'
+    autoRenew: 'Y',
   };
 
   const reservations = [
@@ -16,14 +16,14 @@ const MyPage = () => {
       exerciseName: '수영',
       date: '20230201',
       facilityName: '월드컵수영장',
-      address: '서울시 마포구 월드컵 북로 416'
+      address: '서울시 마포구 월드컵 북로 416',
     },
     {
       exerciseName: '테니스',
       date: '20230301',
       facilityName: '월드컵테니스장',
-      address: '서울시 마포구 창천로 70'
-    }
+      address: '서울시 마포구 창천로 70',
+    },
   ];
 
   return (
@@ -33,7 +33,7 @@ const MyPage = () => {
         <span className="status-box">사용중</span>
       </div>
       <br />
-      <table className='info-box'>
+      {/* <table className='info-box'>
         <tr>
           <td>시작일</td>
           <tr>{subscriptions.startDate}</tr>
@@ -74,7 +74,7 @@ const MyPage = () => {
             </tr>
           ))}
         </tbody>
-      </table>
+      </table> */}
     </div>
   );
 };
