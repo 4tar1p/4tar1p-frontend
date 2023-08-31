@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './styles/Reservation.css';
 import { useNavigate } from 'react-router-dom';
 import Calendar from 'react-calendar';
-// import 'react-calendar/dist/Calendar.css';
 import moment from 'moment';
 import RadiusRect from 'components/RadiusRect';
 import Header from 'components/Header';
@@ -17,7 +16,7 @@ const Reservation = () => {
   const timeList = ['12:00', '12:30', '13:30', '15:00'];
 
   const handleReserve = () => {
-    navigate('reservationcompletion');
+    navigate('/reservationcompletion');
   };
 
   return (
