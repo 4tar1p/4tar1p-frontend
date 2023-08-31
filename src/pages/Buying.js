@@ -72,14 +72,16 @@ const Buying = () => {
       <ProgressBar value={(100 * (step + 1)) / 3} />
       {step == 0 && (
         <>
-          <div className="title">어디서 운동하실건가요?</div>
+          <div className="progressTitle">어디서 운동하실건가요?</div>
+          <select>
           {regionList.map((region, i) => {
-            return <div key={i}>{region.name}</div>;
+            return <option key={i}>{region.name}</option>;
           })}
+          </select>
 
           <RadiusRect
             height="54px"
-            backgroundColor="black"
+            backgroundColor="#6adfa0"
             color="white"
             onClick={handleClick}
           >
@@ -89,7 +91,7 @@ const Buying = () => {
       )}
       {step == 1 && (
         <>
-          <div className="title">종목을 선택해주세요!</div>
+          <div className="progressTitle">종목을 선택해주세요!</div>
           <div className="sports_grid">
             {sportsList.map((sports, i) => {
               return <SportsCard key={i} sports={sports} />;
@@ -98,7 +100,7 @@ const Buying = () => {
 
           <RadiusRect
             height="54px"
-            backgroundColor="black"
+            backgroundColor="#6adfa0"
             color="white"
             onClick={handleClick}
           >
@@ -108,7 +110,7 @@ const Buying = () => {
       )}
       {step == 2 && (
         <>
-          <div className="title">횟수를 선택해주세요!</div>
+          <div className="progressTitle">횟수를 선택해주세요!</div>
           {sportsList.map((sports, i) => {
             if (sports.selected) {
               return <SelectedSports key={i} sports={sportsList[i]} />;
@@ -116,7 +118,7 @@ const Buying = () => {
           })}
           <RadiusRect
             height="54px"
-            backgroundColor="black"
+            backgroundColor="#6adfa0"
             color="white"
             onClick={handlePay}
           >
