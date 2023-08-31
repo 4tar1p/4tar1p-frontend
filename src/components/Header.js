@@ -17,7 +17,7 @@ const Header = ({ title }) => {
   return (
     <>
       <div className="header">
-        {pathname != '/' ? (
+        {(pathname != '/' && pathname != '/homewithsub') ? (
           <div className="header_left">
             <img
               className="header_btn"
