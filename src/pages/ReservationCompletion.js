@@ -1,7 +1,8 @@
 // ReservationCompletion.js
 import React from 'react';
-import './styles/Reservation.css'; 
 import { useNavigate } from 'react-router-dom';
+import RadiusRect from 'components/RadiusRect';
+import './styles/BuyingCompletion.css';
 
 const ReservationCompletion = () => {
   const navigate = useNavigate();
@@ -11,14 +12,21 @@ const ReservationCompletion = () => {
   };
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h2>예약이 완료되었습니다</h2>
-      <button 
-        style={{ marginTop: '20px', padding: '10px 20px' }}
-        onClick={handleGoHome}
-      >
-        홈으로 돌아가기
-      </button>
+    <div className="page">
+      <div className="buying_completion_wrapper">
+        <div className="buying_completion_title">{`예약이 완료되었습니다!`}</div>
+        <RadiusRect
+          backgroundColor="#6adfa0"
+          color="white"
+          width="340px"
+          height={'72px'}
+          fontSize={'24px'}
+          fontWeight={500}
+          onClick={handleGoHome}
+        >
+          <div>홈으로 이동하기</div>
+        </RadiusRect>
+      </div>
     </div>
   );
 };

@@ -1,31 +1,33 @@
 // BuyingCompletion.js
 import React from 'react';
-import './styles/Buying.css';
 import { useNavigate } from 'react-router-dom';
+import RadiusRect from 'components/RadiusRect';
+import './styles/BuyingCompletion.css';
 
 const BuyingCompletion = () => {
   const navigate = useNavigate();
 
   const handleGoHome = () => {
-    navigate('/homewithsub');
-  };
-
-  const handleReservation = () => {
-    navigate('/reservation');
+    navigate('/');
   };
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h2>구독이 완료되었습니다.</h2>
-      <br></br>
-      <h2>2만원 절약하셨네요!💸</h2>
-      
-      <button
-        style={{ marginTop: '20px', padding: '10px 20px' }}
-        onClick={handleGoHome}
-      >
-        홈으로 이동하기
-      </button>
+    <div className="page">
+      <div className="buying_completion_wrapper">
+        <div className="buying_completion_title">{`구독이 완료되었습니다.`}</div>
+        <div className="buying_completion_title">{`2만원 절약하셨네요!💸`}</div>
+        <RadiusRect
+          backgroundColor="#6adfa0"
+          color="white"
+          width="340px"
+          height={'72px'}
+          fontSize={'24px'}
+          fontWeight={500}
+          onClick={handleGoHome}
+        >
+          <div>홈으로 이동하기</div>
+        </RadiusRect>
+      </div>
     </div>
   );
 };

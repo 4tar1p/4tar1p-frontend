@@ -1,0 +1,14 @@
+.buying_completion_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 720px;
+}
+
+.buying_completion_title {
+  font-size: 24px;
+  font-weight: var(--semibold);
+  margin: 20px auto 10px auto;
+  white-space: pre-line;
+}
