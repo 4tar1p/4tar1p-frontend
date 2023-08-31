@@ -14,7 +14,7 @@ const MyPage = () => {
     // } catch (err) {
     //   alert(err);
     // }
-  };          
+  };
 
   const mySubscription = {
     userId: 1, // 사용자ID (int)
@@ -94,7 +94,7 @@ const MyPage = () => {
             </tr>
           ))}
         </tbody>
-      </table>
+      </table> */}
     </div>
   );
   
