@@ -1,7 +1,7 @@
 export const regionList = [{ name: '홍대/마포/상수' }, { name: '종로/중구' }];
 export const subPackList = [
   {
-    name: '정적팩',
+    name: '온더매트팩',
     attributes: [
       { exercise: '요가' },
       { exercise: '필라테스' },
@@ -13,7 +13,7 @@ export const subPackList = [
     attributes: [{ exercise: '수영' }, { exercise: '실내서핑' }],
   },
   {
-    name: '귀족팩',
+    name: '로열팩',
     attributes: [
       { exercise: '테니스' },
       { exercise: '골프' },
@@ -21,7 +21,7 @@ export const subPackList = [
     ],
   },
   {
-    name: '동적팩',
+    name: '익스트림팩',
     attributes: [
       { exercise: '테니스' },
       { exercise: 'PT' },
