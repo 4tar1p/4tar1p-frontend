@@ -7,7 +7,7 @@ const BuyingCompletion = () => {
   const navigate = useNavigate();
 
   const handleGoHome = () => {
-    navigate('/ui');
+    navigate('/');
   };
   
   const handleReservation = () => {
