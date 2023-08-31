@@ -19,8 +19,9 @@
 }
 
 .calendar_wrapper {
-  margin: 0 auto;
+  margin: 0 20px;
 }
+
 .reservation_wrapper {
   margin: 10px 20px;
 }

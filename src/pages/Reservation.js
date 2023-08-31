@@ -63,8 +63,9 @@ const Reservation = () => {
           })}
         </div>
       </div>
-      <div style={{ margin: 'auto auto 10px auto' }}>
+      <div style={{ margin: 'auto 20px 10px 20px' }}>
         <RadiusRect
+          width="100%"
           height="54px"
           backgroundColor="#609966"
           color="white"
