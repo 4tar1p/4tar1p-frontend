@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from 'app/hooks';
 import RadiusRect from 'components/RadiusRect';
+import Header from 'components/Header';
 import {
   decreaseCnt,
   increaseCnt,
@@ -79,6 +80,14 @@ const Buying = () => {
 
   const [isClick, setIsClick] = useState(false);
   const [spanClassName, setSpanClassName] = useState('countAlertMessage-hide');
+  const [payButtonBackgroundColor, setPayButtonBackgroundColor] = useState('#EDF1D6');
+  const [payButtonColor, setPayButtonColor] = useState('#40513B');
+
+  useEffect(() => {
+    setSpanClassName(totalCount != 10 ? 'countAlertMessage' : 'countAlertMessage-hide');
+    setPayButtonBackgroundColor(totalCount != 10 ? '#EDF1D6' : '#609966');
+    setPayButtonColor(totalCount != 10 ? '#40513B' : 'white');
+  }, [totalPrice]);
 
   const handlePay = () => {
     if (!isClick) {
@@ -91,10 +100,10 @@ const Buying = () => {
     });
 
     if (totalCount != 10) {
-      setSpanClassName('countAlertMessage');
+      // setSpanClassName('countAlertMessage');
       return;
     }
-    setSpanClassName('countAlertMessage-hide');
+    // setSpanClassName('countAlertMessage-hide');
     navigate('/buyingcompletion');
   };
 
@@ -104,7 +113,6 @@ const Buying = () => {
     }
 
     dispatch(setTotalCount(plusOrMinus));
-
     dispatch(setTotalPrice(sportsList[sportId].price * plusOrMinus));
     dispatch(
       setTotalOriginPrice(sportsList[sportId].originPrice * plusOrMinus),
@@ -113,6 +121,7 @@ const Buying = () => {
 
   return (
     <div className="page">
+      <Header title="이달의운세" />
       <div className="progressTitle">횟수를 선택해주세요!</div>
       <div className="sports_card_wrapper">
         {sportsList.map((sports, i) => {
@@ -153,8 +162,13 @@ const Buying = () => {
       </div>
       <RadiusRect
         height="54px"
+<<<<<<< HEAD
         backgroundColor="#609966"
         color="white"
+=======
+        backgroundColor={payButtonBackgroundColor}
+        color={payButtonColor}
+>>>>>>> feat/button-disable
         onClick={handlePay}
       >
         <div>결제</div>
