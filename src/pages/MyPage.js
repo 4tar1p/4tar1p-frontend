@@ -32,6 +32,7 @@ const MyPage = () => {
               style={{
                 display: 'grid',
                 gridTemplateColumns: '1fr 1fr',
+                marginBottom: '8px'
               }}
             >
               <div style={{ fontSize: '17px', textAlign: 'center' }}>
@@ -40,6 +41,22 @@ const MyPage = () => {
               <div style={{ fontSize: '17px', textAlign: 'center' }}>
                 잔여 8 / 10{' '}
               </div>
+            </div>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: '1fr 1fr 1fr'
+              }}
+            >
+              <div style={{ fontSize: '15px', textAlign: 'center' }}>
+                테니스 1/2
+              </div>
+              <div style={{ fontSize: '15px', textAlign: 'center' }}>
+                복싱 1/3
+              </div>     
+              <div style={{ fontSize: '15px', textAlign: 'center' }}>
+                수영 1/5
+              </div>        
             </div>
           </div>
         </RadiusRect>
@@ -52,7 +69,7 @@ const MyPage = () => {
               <div>테니스</div>
             </div>
             <div>
-              <div style={{ fontSize: '17px' }}>다니아믹테니스 북가좌점</div>
+              <div style={{ fontSize: '17px' }}>다이나믹테니스 북가좌점</div>
               <div style={{ fontSize: '15px' }}>2023.09.03 19:30</div>
               <div style={{ color: 'grey', fontSize: '12px' }}>
                 서울시 서대문구 증가로12가길 78
