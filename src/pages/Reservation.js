@@ -71,7 +71,7 @@ const Reservation = () => {
       >
         <div>예약하기</div>
       </RadiusRect>
-    </div>
+      </div>
   );
 };
 
