@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-// TODO: server 주소로 변경
-const baseURL = 'https://google.com';
+const baseURL = 'http://13.209.248.222:8090';
 
 const instance = axios.create({
   baseURL: baseURL,
@@ -9,5 +8,10 @@ const instance = axios.create({
 
 /** TEST용 **/
 export const test = () => {
-  return instance.get('/');
+  return instance.get('/demo/test/healthcheck');
+};
+
+/** 마이페이지용 **/
+export const mySubscription = (userId) => {
+  return instance.get('/users/{userId}');
 };

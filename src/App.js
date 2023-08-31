@@ -4,13 +4,17 @@ import { Route, Routes } from 'react-router-dom';
 import Home from 'pages/Home';
 import UI from 'pages/UI';
 import ApiTest from 'pages/ApiTest';
-
-const NotFound = React.lazy(() => import('./pages/NotFound'));
+import Buying from 'pages/Buying';
+import NotFound from 'pages/NotFound';
+import MyPage from './pages/MyPage';
+import BuyingCompletion from './pages/BuyingCompletion';
+import ReservationCompletion from './pages/ReservationCompletion';
 
 function App() {
   return (
     <Routes>
       <Route exact path="/" element={<Home />} />
+      <Route path="/buying" element={<Buying />} />
       {/******** Example ********/}
       {/* <Route path="/login" element={<Login />} />
       <Route
@@ -22,6 +26,12 @@ function App() {
       <Route path="/ui" element={<UI />} />
       <Route path="/api" element={<ApiTest />} />
       <Route path="*" element={<NotFound />}></Route>
+      <Route path="/buyingcompletion" element={<BuyingCompletion />}></Route>
+      <Route
+        path="/reservationcompletion"
+        element={<ReservationCompletion />}
+      ></Route>
+      <Route path="/mypage" element={<MyPage />}></Route>
     </Routes>
   );
 }
