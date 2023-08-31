@@ -8,6 +8,7 @@ const initialState = {
       name: '테니스',
       imgSrc: '/sports/tennis.png',
       price: 20000,
+      originPrice: 22000,
       selected: false,
       cnt: 0,
       // price: '20,000',
@@ -17,6 +18,7 @@ const initialState = {
       name: '복싱',
       imgSrc: '/sports/boxing.png',
       price: 10000,
+      originPrice: 12000,
       selected: false,
       cnt: 0,
 
@@ -27,6 +29,7 @@ const initialState = {
       name: '수영',
       imgSrc: '/sports/swimming.png',
       price: 15000,
+      originPrice: 20000,
       selected: false,
       cnt: 0,
 
@@ -37,6 +40,7 @@ const initialState = {
       name: '헬스',
       imgSrc: '/sports/health.png',
       price: 20000,
+      originPrice: 22000,
       selected: false,
       cnt: 0,
 
@@ -47,6 +51,7 @@ const initialState = {
       name: '필라테스',
       imgSrc: '/sports/pilates.png',
       price: 30000,
+      originPrice: 2000,
       selected: false,
       cnt: 0,
 
