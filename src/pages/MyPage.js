@@ -3,102 +3,88 @@ import { test, getSubscriptionRervation } from 'api/api';
 import './styles/MyPage.css';
 import { useDispatch } from 'react-redux';
 import Header from 'components/Header';
+import RadiusRect from 'components/RadiusRect';
 
-const MyPage = () => {
-  const dispatch = useDispatch();
-
-  const getSubscriptionRervation = async () => {
-    // try {
-    //   const response = await getSubscriptionRervation();
-    //   console.log('api test log', response);
-    //   dispatch(setResponse(response));
-    // } catch (err) {
-    //   alert(err);
-    // }
-  };
-
-  const mySubscription = {
-    userId: 1, // 사용자ID (int)
-    userName: '전승민', // 사용자 이름 (String)
-    subscriptionDttm: '2023-08-31 00:00:00', // 구독 시작일 (LocalDateTime)
-    expirationDttm: '2023-11-31 00:00:00', // 구독 만료일 (LocalDateTime)
-    useCount: 0, // 구독권 사용 횟수(총 횟수는 10)
-    regionGroup: '홍대/합정/마포', // 지역그룹 (String)
-    autoRenewalYn: 'Y', // 자동연장여부 (String)
-  };
-
-  const myReservations = [
-    {
-      exerciseName: '수영', // 운동ID (int)
-      reservationDttm: '2023-08-31 18:30:00', // 예약 날짜 (LocalDateTime)
-      facilityAddress: '상암동 월드컵북로416 마포구 스포렉스',
-    },
-    {
-      exerciseName: '테니스', // 운동ID (int)
-      reservationDttm: '2023-09-03 19:30:00', // 예약 날짜 (LocalDateTime)
-      facilityAddress: '상암동 월드컵북로416 다이나믹테니스',
-    },
-  ];
-
+const History = () => {
   return (
-    <div className="myPage-container">
+    <div>
+      <RadiusRect width="100%">
+        <div className="history_wrapper">
+          <div className="history_img_wrapper">
+            <img className="history_img" src="sports/tennis.png"></img>
+            <div>테니스</div>
+          </div>
+          <div>
+            <div style={{ fontSize: '17px' }}>다니아믹테니스 북가좌점</div>
+            <div style={{ fontSize: '15px' }}>2023.09.03 19:30</div>
+            <div style={{ color: 'grey', fontSize: '12px' }}>
+              서울시 서대문구 증가로12가길 78
+            </div>
+          </div>
+        </div>
+      </RadiusRect>
+      <div style={{ margin: '10px 0' }} />
+      <RadiusRect width="100%">
+        <div className="history_wrapper">
+          <div className="history_img_wrapper">
+            <img className="history_img" src="sports/swimming.png"></img>
+            <div>수영</div>
+          </div>
+          <div>
+            <div style={{ fontSize: '17px' }}>상암동 스포렉스</div>
+            <div style={{ fontSize: '15px' }}>2023.08.31 18:30</div>
+            <div style={{ color: 'grey', fontSize: '12px' }}>
+              서울시 마포구 월드컵북로416
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </RadiusRect>
+    </div>
+  );
+};
+const MyPage = () => {
+  return (
+    <div className="page">
       <Header title="마이페이지" />
-      <h2>보유한 구독권</h2>
-      <div>
-        <span className="status-box">사용중</span>
-        <span className="discount-text">
-          이번달 총 2만원 할인 혜택을 받으셨네요!
-        </span>
+      <div className="mypage_wrapper">
+        <div className="home_title">{`유진님!\n이번달 총 2만원 할인 혜택을 받으셨네요!`}</div>
+        <RadiusRect
+          backgroundColor="#609966"
+          color="white"
+          width="100%"
+          fontSize={'24px'}
+          fontWeight={500}
+        >
+          <div style={{ margin: '10px auto 10px 10px', width: '100%' }}>
+            <div style={{ fontSize: '23px', marginBottom: '10px' }}>
+              내맘대로 구독팩
+            </div>
+            <div style={{ fontSize: '15px', marginBottom: '4px' }}>
+              홍대/합정/마포
+            </div>
+            <div style={{ fontSize: '17px', marginBottom: '10px' }}>
+              2023.08.31 ~ 2023.09.31
+            </div>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: '1fr 1fr',
+              }}
+            >
+              <div style={{ fontSize: '17px', textAlign: 'center' }}>
+                예약가능 8{' '}
+              </div>
+              <div style={{ fontSize: '17px', textAlign: 'center' }}>
+                잔여 9 / 10{' '}
+              </div>
+            </div>
+          </div>
+        </RadiusRect>
+
+        <div className="home_title">예약 현황</div>
+        {<History></History>}
       </div>
-      <br />
-      <table className="info-box">
-        <tbody>
-          <tr>
-            <td>사용자 이름</td>
-            <td>{mySubscription.userName}</td>
-          </tr>
-          <tr>
-            <td>시작일</td>
-            <td>{mySubscription.subscriptionDttm.split(' ')[0]}</td>
-          </tr>
-          <tr>
-            <td>만료일</td>
-            <td>{mySubscription.expirationDttm.split(' ')[0]}</td>
-          </tr>
-          <tr>
-            <td>사용횟수</td>
-            <td>{mySubscription.useCount}/10</td>
-          </tr>
-          <tr>
-            <td>지역 그룹</td>
-            <td>{mySubscription.regionGroup}</td>
-          </tr>
-          <tr>
-            <td>자동 연장여부</td>
-            <td>{mySubscription.autoRenewalYn === 'Y' ? 'Yes' : 'No'}</td>
-          </tr>
-        </tbody>
-      </table>
-      <br />
-      <h2>예약 현황</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>운동이름</th>
-            <th>날짜</th>
-            <th>시설 주소</th>
-          </tr>
-        </thead>
-        <tbody>
-          {myReservations.map((reservation, idx) => (
-            <tr key={idx}>
-              <td>{reservation.exerciseName}</td>
-              <td>{reservation.reservationDttm.substring(0, 16)}</td>
-              <td>{reservation.facilityAddress}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
     </div>
   );
 };
