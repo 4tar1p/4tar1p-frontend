@@ -42,31 +42,25 @@ const SportsCard = ({ sports, calculateTotalPay }) => {
   return (
     <div className="sports_card" onClick={handleClick}>
       <img className="sports_img" src={sports.imgSrc}></img>
-      <div style={{ fontSize: '2em', fontWeight: 'bold' }}>{sports.name}</div>
-      <div style={{ fontWeight: 'bold', color: 'red' }}>
-        1회 {sports.price}원
-      </div>
-      <div
+      <div style={{ fontSize: '1.1em', fontWeight: 'bold' }}>{sports.name}</div>
+      <span
         style={{
-          fontWeight: 'bold',
+          fontSize: '13px',
           color: 'gray',
           textDecoration: 'line-through',
         }}
       >
-        1회 {sports.originPrice}
-      </div>
+        {sports.originPrice}원/회
+      </span>
+      <br></br>
+      <span style={{ fontWeight: 'bold', color: '#e86a33' }}>
+        {sports.price}원
+      </span>
+      <span style={{fontSize: '15px'}}>/회</span>
       <div className="increase-decrease-count">
-        <img
-          className="cnt_btn"
-          src={'/minus.png'}
-          onClick={handleDecrease}
-        ></img>
-        <div>{sports.cnt}</div>
-        <img
-          className="cnt_btn"
-          src={'/add.png'}
-          onClick={handleIncrease}
-        ></img>
+        <span className="material-symbols-outlined" onClick={handleDecrease}>do_not_disturb_on</span>
+        <span>{sports.cnt}</span>
+        <span className="material-symbols-outlined" onClick={handleIncrease}>add_circle</span>
       </div>
     </div>
   );
@@ -148,22 +142,21 @@ const Buying = () => {
         </span>
       )}
       <hr />
-      <div className="total-container">
-        <div style={{ color: 'red', fontSize: '30px', fontWeight: 'bold' }}>
-          {totalPrice}원
-        </div>
-        <div className="total-count-div">{totalCount}회</div>
-      </div>
       <div
         style={{
           paddingLeft: '10px',
           color: 'gray',
-          fontSize: '25px',
-          fontWeight: 'bold',
+          fontSize: '20px',
           textDecoration: 'line-through',
         }}
       >
         {totalOriginPrice}원
+      </div>
+      <div className="total-container">
+        <div style={{ color: '#e86a33', fontSize: '30px', fontWeight: 'bold' }}>
+          {totalPrice}원
+        </div>
+        <div className="total-count-div">{totalCount}회</div>
       </div>
       <RadiusRect
         height="54px"

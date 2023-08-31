@@ -9,7 +9,7 @@ const initialState = {
     {
       id: 0,
       name: '테니스',
-      imgSrc: '/sports/tennis.png',
+      imgSrc: '/sports/tennis_1.png',
       price: 20000,
       originPrice: 22000,
       selected: false,
@@ -19,7 +19,7 @@ const initialState = {
     {
       id: 1,
       name: '복싱',
-      imgSrc: '/sports/boxing.png',
+      imgSrc: '/sports/boxing_1.png',
       price: 10000,
       originPrice: 12000,
       selected: false,
@@ -30,7 +30,7 @@ const initialState = {
     {
       id: 2,
       name: '수영',
-      imgSrc: '/sports/swimming.png',
+      imgSrc: '/sports/swimming_1.png',
       price: 15000,
       originPrice: 20000,
       selected: false,
@@ -41,7 +41,7 @@ const initialState = {
     {
       id: 3,
       name: '헬스',
-      imgSrc: '/sports/health.png',
+      imgSrc: '/sports/health_1.png',
       price: 20000,
       originPrice: 22000,
       selected: false,
@@ -52,9 +52,9 @@ const initialState = {
     {
       id: 4,
       name: '필라테스',
-      imgSrc: '/sports/pilates.png',
-      price: 30000,
-      originPrice: 2000,
+      imgSrc: '/sports/pilates_1.png',
+      price: 17000,
+      originPrice: 20000,
       selected: false,
       cnt: 0,
 
