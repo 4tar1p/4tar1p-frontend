@@ -7,9 +7,9 @@ import UI from 'pages/UI';
 import ApiTest from 'pages/ApiTest';
 import Buying from 'pages/Buying';
 import NotFound from 'pages/NotFound';
-import MyPage from './pages/MyPage';
-import BuyingCompletion from './pages/BuyingCompletion';
-import ReservationCompletion from './pages/ReservationCompletion';
+import MyPage from 'pages/MyPage';
+import BuyingCompletion from 'pages/BuyingCompletion';
+import ReservationCompletion from 'pages/ReservationCompletion';
 import Reservation from 'pages/Reservation';
 
 function App() {
