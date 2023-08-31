@@ -10,6 +10,7 @@ import {
   setTotalOriginPrice,
   setTotalCount,
   initCnt,
+  initTotalCnt,
 } from 'features/buying/buying';
 import { useNavigate } from 'react-router-dom';
 import { regionList } from 'constants/constants';
@@ -107,6 +108,7 @@ const Buying = () => {
     }
     // setSpanClassName('countAlertMessage-hide');
     dispatch(initCnt());
+    dispatch(initTotalCnt());
     navigate('/buyingcompletion');
   };
 

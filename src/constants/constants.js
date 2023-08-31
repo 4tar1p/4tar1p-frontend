@@ -1,12 +1,12 @@
 export const regionList = [
-  { name: '홍대/마포/상수' }, 
+  { name: '홍대/마포/상수' },
   { name: '종로/중구' },
-  {name: '잠실/송파/강동'},
-  {name: '영등포/여의도/강서'},
-  {name: '건대/성수/왕십리'},
-  {name: '용산/이태원/한남'},
-  {name: '성북/노원/중랑'},
-  {name: '구로/관악/동작'}
+  { name: '잠실/송파/강동' },
+  { name: '영등포/여의도/강서' },
+  { name: '건대/성수/왕십리' },
+  { name: '용산/이태원/한남' },
+  { name: '성북/노원/중랑' },
+  { name: '구로/관악/동작' },
 ];
 export const subPackList = [
   {
@@ -37,6 +37,13 @@ export const subPackList = [
       { exercise: '클라이밍' },
     ],
   },
+];
+
+export const tennisFacillityList = [
+  '산장테니스장',
+  '한강망원테니스장',
+  '다이나믹테니스 북가좌점',
+  '테니스판타지 상암DMC',
 ];
 // export const sportsList = [
 //   {
