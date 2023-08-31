@@ -1,20 +1,22 @@
 import React from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Home from 'pages/Home';
+import HomeWithoutSub from 'pages/HomeWithoutSub';
+import HomeWithSub from 'pages/HomeWithSub';
 import UI from 'pages/UI';
 import ApiTest from 'pages/ApiTest';
 import Buying from 'pages/Buying';
 import NotFound from 'pages/NotFound';
-import MyPage from './pages/MyPage';
-import ReservationCompletion from './pages/ReservationCompletion';
-import BuyingCompletion from './pages/BuyingCompletion';
+import MyPage from 'pages/MyPage';
+import BuyingCompletion from 'pages/BuyingCompletion';
+import ReservationCompletion from 'pages/ReservationCompletion';
 import Reservation from 'pages/Reservation';
 
 function App() {
   return (
     <Routes>
-      <Route exact path="/" element={<Home />} />
+      <Route exact path="/" element={<HomeWithoutSub />} />
+      <Route exact path="/homewithsub" element={<HomeWithSub />} />
       <Route path="/buying" element={<Buying />} />
       {/******** Example ********/}
       {/* <Route path="/login" element={<Login />} />
