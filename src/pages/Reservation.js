@@ -63,15 +63,17 @@ const Reservation = () => {
           })}
         </div>
       </div>
-      <RadiusRect
-        height="54px"
-        backgroundColor="#609966"
-        color="white"
-        onClick={handleReserve}
-      >
-        <div>예약하기</div>
-      </RadiusRect>
+      <div style={{ margin: 'auto auto 10px auto' }}>
+        <RadiusRect
+          height="54px"
+          backgroundColor="#609966"
+          color="white"
+          onClick={handleReserve}
+        >
+          <div>예약하기</div>
+        </RadiusRect>
       </div>
+    </div>
   );
 };
 

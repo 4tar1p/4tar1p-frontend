@@ -136,6 +136,12 @@ const buyingSlice = createSlice({
         ),
       };
     },
+    initTotalCnt: (state) => {
+      return {
+        ...state,
+        totalCount: 0,
+      };
+    },
     setTotalPrice: (state, action) => {
       return {
         ...state,
@@ -166,5 +172,6 @@ export const {
   setTotalOriginPrice,
   setTotalCount,
   initCnt,
+  initTotalCnt,
 } = buyingSlice.actions;
 export default buyingSlice.reducer;
