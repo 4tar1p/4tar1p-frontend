@@ -16,7 +16,7 @@ const ReservationCompletion = () => {
       <div className="buying_completion_wrapper">
         <div className="buying_completion_title">{`예약이 완료되었습니다!`}</div>
         <RadiusRect
-          backgroundColor="#6adfa0"
+          backgroundColor="#609966"
           color="white"
           width="340px"
           height={'72px'}

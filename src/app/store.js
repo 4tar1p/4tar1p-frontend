@@ -12,6 +12,7 @@ import persistReducer from 'redux-persist/es/persistReducer';
 // import discovery from 'features/discovery/discovery';
 // import detailStay from 'features/detailStay/detailStay';
 import buying from 'features/buying/buying';
+import reservation from 'features/reservation/reservation';
 
 const persistConfig = {
   key: 'root',
@@ -28,6 +29,7 @@ const persistConfig = {
     // 'discovery',
     // 'detailStay',
     'buying',
+    'reservation',
   ],
 };
 
@@ -41,6 +43,7 @@ const reducer = combineReducers({
   // discovery: discovery,
   // detailStay: detailStay,
   buying: buying,
+  reservation: reservation,
 });
 
 const persistedReducer = persistReducer(persistConfig, reducer);

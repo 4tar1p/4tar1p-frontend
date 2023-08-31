@@ -17,7 +17,7 @@ const BuyingCompletion = () => {
         <div className="buying_completion_title">{`구독이 완료되었습니다.`}</div>
         <div className="buying_completion_title">{`2만원 절약하셨네요!💸`}</div>
         <RadiusRect
-          backgroundColor="#6adfa0"
+          backgroundColor="#609966"
           color="white"
           width="340px"
           height={'72px'}

@@ -7,7 +7,7 @@ import {
   selectedSports,
   setTotalPrice,
   setTotalOriginPrice,
-  setTotalCount
+  setTotalCount,
 } from 'features/buying/buying';
 import { useNavigate } from 'react-router-dom';
 import { regionList } from 'constants/constants';
@@ -39,16 +39,32 @@ const SportsCard = ({ sports, calculateTotalPay }) => {
 
   return (
     <div className="sports_card" onClick={handleClick}>
-        <img  className = "sports_img" src={sports.imgSrc}></img>
-        <div style={{fontSize:'2em', fontWeight:'bold'}}>{sports.name}</div>
-        <div style={{fontWeight:'bold', color:'red'}}>1회 {sports.price}원</div>
-        <div style={{fontWeight:'bold', color:'gray', textDecoration:'line-through'}}>1회 {sports.originPrice}</div>
-        <div className='increase-decrease-count'>
-          <img
-            className="cnt_btn" src={'/minus.png'} onClick={handleDecrease}
-          ></img>
-          <div>{sports.cnt}</div>
-          <img className="cnt_btn" src={'/add.png'} onClick={handleIncrease}></img>
+      <img className="sports_img" src={sports.imgSrc}></img>
+      <div style={{ fontSize: '2em', fontWeight: 'bold' }}>{sports.name}</div>
+      <div style={{ fontWeight: 'bold', color: 'red' }}>
+        1회 {sports.price}원
+      </div>
+      <div
+        style={{
+          fontWeight: 'bold',
+          color: 'gray',
+          textDecoration: 'line-through',
+        }}
+      >
+        1회 {sports.originPrice}
+      </div>
+      <div className="increase-decrease-count">
+        <img
+          className="cnt_btn"
+          src={'/minus.png'}
+          onClick={handleDecrease}
+        ></img>
+        <div>{sports.cnt}</div>
+        <img
+          className="cnt_btn"
+          src={'/add.png'}
+          onClick={handleIncrease}
+        ></img>
       </div>
     </div>
   );
@@ -58,7 +74,8 @@ const Buying = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
-  const { sportsList, totalPrice, totalOriginPrice, totalCount } = useAppSelector((state) => state.buying);
+  const { sportsList, totalPrice, totalOriginPrice, totalCount } =
+    useAppSelector((state) => state.buying);
 
   const [isClick, setIsClick] = useState(false);
   const [spanClassName, setSpanClassName] = useState('countAlertMessage-hide');
@@ -67,9 +84,9 @@ const Buying = () => {
     if (!isClick) {
       setIsClick(true);
     }
-    
+
     let totalCount = 0;
-    sportsList.forEach(sport => {
+    sportsList.forEach((sport) => {
       totalCount += sport.cnt;
     });
 
@@ -89,35 +106,54 @@ const Buying = () => {
     dispatch(setTotalCount(plusOrMinus));
 
     dispatch(setTotalPrice(sportsList[sportId].price * plusOrMinus));
-    dispatch(setTotalOriginPrice(sportsList[sportId].originPrice * plusOrMinus));
-  }
+    dispatch(
+      setTotalOriginPrice(sportsList[sportId].originPrice * plusOrMinus),
+    );
+  };
 
   return (
     <div className="page">
       <div className="progressTitle">횟수를 선택해주세요!</div>
-      <div className="sports_card_wrapper" >
+      <div className="sports_card_wrapper">
         {sportsList.map((sports, i) => {
-            return <SportsCard key={i} sports={sportsList[i]} calculateTotalPay={calculateTotalPay} />;
+          return (
+            <SportsCard
+              key={i}
+              sports={sportsList[i]}
+              calculateTotalPay={calculateTotalPay}
+            />
+          );
         })}
       </div>
-      {isClick && <span className={spanClassName} style={{color:'red',fontSize:'12px',textAlign:'right'}}>
+      {isClick && (
+        <span
+          className={spanClassName}
+          style={{ color: 'red', fontSize: '12px', textAlign: 'right' }}
+        >
           *총 10회를 선택해주세요
-        </span>}
-      <hr/>
-      <div className='total-container'>
-      <div style={{color:'red',fontSize:'30px',fontWeight:'bold'}}>
-        {totalPrice}원
+        </span>
+      )}
+      <hr />
+      <div className="total-container">
+        <div style={{ color: 'red', fontSize: '30px', fontWeight: 'bold' }}>
+          {totalPrice}원
+        </div>
+        <div className="total-count-div">{totalCount}회</div>
       </div>
-      <div className='total-count-div'>
-        {totalCount}회
-      </div>
-      </div>
-      <div style={{paddingLeft:'10px',color:'gray',fontSize:'25px',fontWeight:'bold',textDecoration:'line-through'}}>
+      <div
+        style={{
+          paddingLeft: '10px',
+          color: 'gray',
+          fontSize: '25px',
+          fontWeight: 'bold',
+          textDecoration: 'line-through',
+        }}
+      >
         {totalOriginPrice}원
       </div>
       <RadiusRect
         height="54px"
-        backgroundColor="#6adfa0"
+        backgroundColor="#609966"
         color="white"
         onClick={handlePay}
       >

@@ -18,7 +18,7 @@ const HomeWithSub = () => {
       <div className="home_wrapper">
         <div className="home_title">{`유진님!\n저와 같이 운동해요 😊`}</div>
         <RadiusRect
-          backgroundColor="#6adfa0"
+          backgroundColor="#609966"
           color="white"
           width="100%"
           height={'72px'}
