@@ -8,7 +8,7 @@ const BuyingCompletion = () => {
   const navigate = useNavigate();
 
   const handleGoHome = () => {
-    navigate('/');
+    navigate('/homewithsub');
   };
 
   return (
