@@ -32,9 +32,6 @@ jobs:
       - name: 2. Check Node v            # Node v 확인
         run: node -v
 
-      - name: 3. Install     
-        run: yarn install
-
       - name: 3-1. 캐시 지우기
         run: |
           yarn cache clean
@@ -44,7 +41,7 @@ jobs:
           rm -rf yarn.lock
 
       - name: Install Dependencies
-        run: yarn
+        run: yarn install
   
       - name: Build
         run: yarn build
@@ -60,6 +57,4 @@ jobs:
         run: aws s3 sync build/ s3://${{ env.S3_BUCKET_NAME }} --delete
 
       - name: Invalidate CloudFront Cache
-        run: aws cloudfront create-invalidation \
-          --distribution-id ${{ secrets.AWS_CLOUDFRONT_ID }} --paths "/*"
-
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_ID }} --paths "/*"
