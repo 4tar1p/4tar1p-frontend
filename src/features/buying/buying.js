@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   step: 0,
-  totalPrice : 0,
+  totalPrice: 0,
   totalOriginPrice: 0,
   totalCount: 0,
   sportsList: [
@@ -123,27 +123,48 @@ const buyingSlice = createSlice({
         ),
       };
     },
-    setTotalPrice : (state, action) => {
+    initCnt: (state) => {
       return {
         ...state,
-        totalPrice: state.totalPrice + action.payload
-      }
+        sportsList: state.sportsList.map((ele, i) =>
+          i == i
+            ? {
+                ...state.sportsList[i],
+                cnt: 0,
+              }
+            : { ...state.sportsList[i], cnt: 0 },
+        ),
+      };
     },
-    setTotalOriginPrice : (state, action) => {
+    setTotalPrice: (state, action) => {
       return {
         ...state,
-        totalOriginPrice: state.totalOriginPrice + action.payload
-      }
+        totalPrice: state.totalPrice + action.payload,
+      };
+    },
+    setTotalOriginPrice: (state, action) => {
+      return {
+        ...state,
+        totalOriginPrice: state.totalOriginPrice + action.payload,
+      };
     },
     setTotalCount: (state, action) => {
       return {
         ...state,
-        totalCount: state.totalCount + action.payload
-      }
-    }
+        totalCount: state.totalCount + action.payload,
+      };
+    },
   },
 });
 
-export const { clickedNextStep, selectedSports, increaseCnt, decreaseCnt, setTotalPrice, setTotalOriginPrice, setTotalCount } =
-  buyingSlice.actions;
+export const {
+  clickedNextStep,
+  selectedSports,
+  increaseCnt,
+  decreaseCnt,
+  setTotalPrice,
+  setTotalOriginPrice,
+  setTotalCount,
+  initCnt,
+} = buyingSlice.actions;
 export default buyingSlice.reducer;

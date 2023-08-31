@@ -9,6 +9,7 @@ import {
   setTotalPrice,
   setTotalOriginPrice,
   setTotalCount,
+  initCnt,
 } from 'features/buying/buying';
 import { useNavigate } from 'react-router-dom';
 import { regionList } from 'constants/constants';
@@ -80,11 +81,14 @@ const Buying = () => {
 
   const [isClick, setIsClick] = useState(false);
   const [spanClassName, setSpanClassName] = useState('countAlertMessage-hide');
-  const [payButtonBackgroundColor, setPayButtonBackgroundColor] = useState('#EDF1D6');
+  const [payButtonBackgroundColor, setPayButtonBackgroundColor] =
+    useState('#EDF1D6');
   const [payButtonColor, setPayButtonColor] = useState('#40513B');
 
   useEffect(() => {
-    setSpanClassName(totalCount != 10 ? 'countAlertMessage' : 'countAlertMessage-hide');
+    setSpanClassName(
+      totalCount != 10 ? 'countAlertMessage' : 'countAlertMessage-hide',
+    );
     setPayButtonBackgroundColor(totalCount != 10 ? '#EDF1D6' : '#609966');
     setPayButtonColor(totalCount != 10 ? '#40513B' : 'white');
   }, [totalPrice]);
@@ -104,6 +108,7 @@ const Buying = () => {
       return;
     }
     // setSpanClassName('countAlertMessage-hide');
+    dispatch(initCnt());
     navigate('/buyingcompletion');
   };
 
