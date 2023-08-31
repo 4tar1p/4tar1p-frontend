@@ -1,4 +1,4 @@
-export const regionList = [{ name: '홍대/마포/상수' }, { name: '강남' }];
+export const regionList = [{ name: '홍대/마포/상수' }, { name: '종로/중구' }];
 // export const sportsList = [
 //   {
 //     id: 0,
