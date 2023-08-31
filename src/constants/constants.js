@@ -16,10 +16,12 @@ export const subPackList = [
       { exercise: '필라테스' },
       { exercise: '플라잉요가' },
     ],
+    description: "정적인 운동을 좋아하는 당신께 추천드려요"
   },
   {
     name: '물놀이팩',
     attributes: [{ exercise: '수영' }, { exercise: '실내서핑' }],
+    description: "더운 여름을 피하고 싶다면 구독하세요!"
   },
   {
     name: '로열팩',
@@ -28,6 +30,7 @@ export const subPackList = [
       { exercise: '골프' },
       { exercise: '승마' },
     ],
+    description: "로열 취미도 운세와 함께 저렴하게!"
   },
   {
     name: '익스트림팩',
@@ -36,6 +39,7 @@ export const subPackList = [
       { exercise: 'PT' },
       { exercise: '클라이밍' },
     ],
+    description: "운세와 함께라면 더 짜릿해!"
   },
 ];
 
