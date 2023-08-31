@@ -8,25 +8,36 @@ const Header = ({ title }) => {
   const handleGoBack = () => {
     navigate(-1);
   };
+
+  const handleGoMyPage = () => {
+    navigate('/mypage');
+  };
   const { pathname } = useLocation();
 
   return (
     <>
       <div className="header">
-        <div className="header_left">
-          <img
-            className="header_btn"
-            src="/left_arrow.png"
-            onClick={handleGoBack}
-          ></img>
-        </div>
-
+        {pathname != '/' ? (
+          <div className="header_left">
+            <img
+              className="header_btn"
+              src="/left_arrow.png"
+              onClick={handleGoBack}
+            ></img>
+          </div>
+        ) : (
+          <div></div>
+        )}
         <div className="header_center">
           <div className="header_title">{title}</div>
         </div>
         {pathname != '/mypage' && (
           <div className="header_right">
-            <img className="header_btn" src="/user.png"></img>
+            <img
+              className="header_btn"
+              src="/user.png"
+              onClick={handleGoMyPage}
+            ></img>
           </div>
         )}
       </div>

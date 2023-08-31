@@ -1,36 +1,41 @@
 /* Home.css */
-.home {
-    padding: 10px;
-}
-
-.mainButton{
-    margin-left: auto;
-    margin-right: auto;
-    height: 70px;
-    margin: 20px;
-}
-
-.homeTitle {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin: 1%;
-}
-
-
 .contents_box_wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.contents_box{
-    background-color: lightgray;
-    text-align: center;
-    margin: 10px;
-    padding: 10px;
+.contents_box {
+  background-color: lightgray;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
 }
 
 .health_img {
-    width: 90%;
-    margin-top: 10px;
+  width: 90%;
+  margin-top: 10px;
+}
+
+.home_wrapper {
+  margin: 10px 20px;
+}
+
+.home_title {
+  font-size: 20px;
+  font-weight: var(--semibold);
+  margin: 20px auto 10px auto;
+  white-space: pre-line;
+}
+
+.health_contents_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.sub_pack_detail_sports_name {
+  color: gray;
+  font-size: 15px;
+  margin-left: 5px;
 }

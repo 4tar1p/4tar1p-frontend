@@ -18,6 +18,7 @@ function App() {
     <Routes>
       <Route exact path="/" element={<HomeWithoutSub />} />
       <Route exact path="/homewithsub" element={<HomeWithSub />} />
+      <Route exact path="/homewithoutsub" element={<HomeWithoutSub />} />
       <Route path="/buying" element={<Buying />} />
       {/******** Example ********/}
       {/* <Route path="/login" element={<Login />} />

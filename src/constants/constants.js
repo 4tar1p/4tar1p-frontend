@@ -1,5 +1,34 @@
 export const regionList = [{ name: '홍대/마포/상수' }, { name: '종로/중구' }];
-export const subPackList = [{ name: '정적팩', attributes: [{ exercise: '요가'}, { exercise: '필라테스'}, { exercise: '플라잉요가'}] }, { name: '물놀이팩', attributes: [{ exercise: '수영'}, { exercise: '실내수영'}] }, { name: '귀족팩', attributes: [{ exercise: '테니스'}, { exercise: '골프'}, { exercise: '승마'}] }, { name: '동적팩', attributes: [{ exercise: '테니스'}, { exercise: 'PT'}, { exercise: '수영'}] }];
+export const subPackList = [
+  {
+    name: '정적팩',
+    attributes: [
+      { exercise: '요가' },
+      { exercise: '필라테스' },
+      { exercise: '플라잉요가' },
+    ],
+  },
+  {
+    name: '물놀이팩',
+    attributes: [{ exercise: '수영' }, { exercise: '실내서핑' }],
+  },
+  {
+    name: '귀족팩',
+    attributes: [
+      { exercise: '테니스' },
+      { exercise: '골프' },
+      { exercise: '승마' },
+    ],
+  },
+  {
+    name: '동적팩',
+    attributes: [
+      { exercise: '테니스' },
+      { exercise: 'PT' },
+      { exercise: '클라이밍' },
+    ],
+  },
+];
 // export const sportsList = [
 //   {
 //     id: 0,
