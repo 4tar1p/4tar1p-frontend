@@ -54,13 +54,17 @@ const SportsCard = ({ sports, calculateTotalPay }) => {
       </span>
       <br></br>
       <span style={{ fontWeight: 'bold', color: '#e86a33' }}>
-        {sports.price}원
+        {sports.price.toLocaleString('ko-KR')}원
       </span>
-      <span style={{fontSize: '15px'}}>/회</span>
+      <span style={{ fontSize: '15px' }}>/회</span>
       <div className="increase-decrease-count">
-        <span className="material-symbols-outlined" onClick={handleDecrease}>do_not_disturb_on</span>
+        <span className="material-symbols-outlined" onClick={handleDecrease}>
+          do_not_disturb_on
+        </span>
         <span>{sports.cnt}</span>
-        <span className="material-symbols-outlined" onClick={handleIncrease}>add_circle</span>
+        <span className="material-symbols-outlined" onClick={handleIncrease}>
+          add_circle
+        </span>
       </div>
     </div>
   );
@@ -121,59 +125,78 @@ const Buying = () => {
   return (
     <div className="page">
       <Header title="이달의운세" />
-      <div className="progressTitle">지역을 선택해주세요!</div>
-      <div style={{padding:'0 10px'}}>
-      <select className="reservation_sports_wrapper">
-          {regionList.map((region, i) => {
-            return <option key={i} style={{}}>{region.name}</option>;
-          })}
-        </select>
-      </div>
-      <div className="progressTitle">횟수를 선택해주세요!</div>
-      <div className="sports_card_wrapper">
-        {sportsList.map((sports, i) => {
-          return (
-            <SportsCard
-              key={i}
-              sports={sportsList[i]}
-              calculateTotalPay={calculateTotalPay}
-            />
-          );
-        })}
-      </div>
-      {isClick && (
-        <span
-          className={spanClassName}
-          style={{ color: 'red', fontSize: '12px', textAlign: 'right' }}
-        >
-          *총 10회를 선택해주세요
-        </span>
-      )}
-      <hr />
-      <div
-        style={{
-          paddingLeft: '10px',
-          color: 'gray',
-          fontSize: '20px',
-          textDecoration: 'line-through',
-        }}
-      >
-        {totalOriginPrice}원
-      </div>
-      <div className="total-container">
-        <div style={{ color: '#e86a33', fontSize: '30px', fontWeight: 'bold' }}>
-          {totalPrice}원
+      <div className="buying_wrapper">
+        <div className="progressTitle">지역을 선택해주세요!</div>
+        <div style={{ padding: '0 10px' }}>
+          <select className="reservation_sports_wrapper">
+            {regionList.map((region, i) => {
+              return (
+                <option key={i} style={{}}>
+                  {region.name}
+                </option>
+              );
+            })}
+          </select>
         </div>
-        <div className="total-count-div">{totalCount}회</div>
+        <div className="progressTitle">횟수를 선택해주세요!</div>
+        <div className="sports_card_wrapper">
+          {sportsList.map((sports, i) => {
+            return (
+              <SportsCard
+                key={i}
+                sports={sportsList[i]}
+                calculateTotalPay={calculateTotalPay}
+              />
+            );
+          })}
+        </div>
+        {isClick && (
+          <span
+            className={spanClassName}
+            style={{ color: 'red', fontSize: '12px', textAlign: 'right' }}
+          >
+            *총 10회를 선택해주세요
+          </span>
+        )}
+        <hr />
+        <div style={{ textAlign: 'end', margin: '15px 10px' }}>
+          <div
+            style={{
+              paddingLeft: '10px',
+              color: 'gray',
+              fontSize: '20px',
+              textDecoration: 'line-through',
+            }}
+          >
+            {totalOriginPrice.toLocaleString('ko-KR')}원
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.8fr' }}>
+            <div
+              style={{
+                fontSize: '20px',
+                margin: 'auto 0 5px auto',
+              }}
+            >
+              {totalCount}회
+            </div>
+
+            <div
+              style={{ color: '#e86a33', fontSize: '30px', fontWeight: 'bold' }}
+            >
+              {totalPrice.toLocaleString('ko-KR')}원
+            </div>
+          </div>
+        </div>
+        <RadiusRect
+          width="100%"
+          height="54px"
+          backgroundColor={payButtonBackgroundColor}
+          color={payButtonColor}
+          onClick={handlePay}
+        >
+          <div>결제</div>
+        </RadiusRect>
       </div>
-      <RadiusRect
-        height="54px"
-        backgroundColor={payButtonBackgroundColor}
-        color={payButtonColor}
-        onClick={handlePay}
-      >
-        <div>결제</div>
-      </RadiusRect>
     </div>
   );
 };
