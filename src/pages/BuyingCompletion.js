@@ -15,7 +15,7 @@ const BuyingCompletion = () => {
     <div className="page">
       <div className="buying_completion_wrapper">
         <div className="buying_completion_title">{`구독이 완료되었습니다.`}</div>
-        <div className="buying_completion_title">{`2만원 절약하셨네요!💸`}</div>
+        <div className="buying_completion_title">{`3.5만원 절약하셨네요!💸`}</div>
         <RadiusRect
           backgroundColor="#609966"
           color="white"

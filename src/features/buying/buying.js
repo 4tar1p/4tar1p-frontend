@@ -65,8 +65,8 @@ const initialState = {
     //   name: '클라이밍',
     //   imgSrc: '/sports/climbing.png',
     //   price: 30000,
-    // // price: '30,000',
-    // cnt : 0
+    //   // price: '30,000',
+    //   cnt: 0,
     // },
   ],
 };
