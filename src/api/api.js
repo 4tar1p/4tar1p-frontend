@@ -12,6 +12,6 @@ export const test = () => {
 };
 
 /** 마이페이지용 **/
-export const mySubscription = (userId) => {
+export const getSubscriptionRervation = (userId) => {
   return instance.get('/users/{userId}');
 };
