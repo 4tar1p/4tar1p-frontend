@@ -1,0 +1,29 @@
+.header {
+  margin: 30px 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid red;
+  /* background-color: #d9fee8; */
+}
+
+.header_title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header_btn {
+  width: 30px;
+  height: 30px;
+}
+
+.header_left {
+  text-align: start;
+}
+
+.header_center {
+  text-align: center;
+}
+
+.header_right {
+  text-align: end;
+}

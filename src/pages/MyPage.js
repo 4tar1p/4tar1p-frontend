@@ -1,8 +1,8 @@
 import { React } from 'react';
 import { test, getSubscriptionRervation } from 'api/api';
-import './styles/MyPage.css'; 
+import './styles/MyPage.css';
 import { useDispatch } from 'react-redux';
-import { regionList } from 'constants/constants';
+import Header from 'components/Header';
 
 const MyPage = () => {
   const dispatch = useDispatch();
@@ -19,36 +19,39 @@ const MyPage = () => {
 
   const mySubscription = {
     userId: 1, // 사용자ID (int)
-    userName: "전승민", // 사용자 이름 (String)
-    subscriptionDttm: "2023-08-31 00:00:00", // 구독 시작일 (LocalDateTime)
-    expirationDttm: "2023-11-31 00:00:00", // 구독 만료일 (LocalDateTime)
+    userName: '전승민', // 사용자 이름 (String)
+    subscriptionDttm: '2023-08-31 00:00:00', // 구독 시작일 (LocalDateTime)
+    expirationDttm: '2023-11-31 00:00:00', // 구독 만료일 (LocalDateTime)
     useCount: 0, // 구독권 사용 횟수(총 횟수는 10)
-    regionGroup: "홍대/합정/마포", // 지역그룹 (String)
-    autoRenewalYn: "Y" // 자동연장여부 (String)
+    regionGroup: '홍대/합정/마포', // 지역그룹 (String)
+    autoRenewalYn: 'Y', // 자동연장여부 (String)
   };
-  
+
   const myReservations = [
     {
-      exerciseName: "수영", // 운동ID (int)
-      reservationDttm: "2023-08-31 18:30:00", // 예약 날짜 (LocalDateTime)
-      facilityAddress: "상암동 월드컵북로416 마포구 스포렉스"
-    }, 
+      exerciseName: '수영', // 운동ID (int)
+      reservationDttm: '2023-08-31 18:30:00', // 예약 날짜 (LocalDateTime)
+      facilityAddress: '상암동 월드컵북로416 마포구 스포렉스',
+    },
     {
-      exerciseName: "테니스", // 운동ID (int)
-      reservationDttm: "2023-09-03 19:30:00", // 예약 날짜 (LocalDateTime)
-      facilityAddress: "상암동 월드컵북로416 다이나믹테니스"
-    }
+      exerciseName: '테니스', // 운동ID (int)
+      reservationDttm: '2023-09-03 19:30:00', // 예약 날짜 (LocalDateTime)
+      facilityAddress: '상암동 월드컵북로416 다이나믹테니스',
+    },
   ];
 
   return (
     <div className="myPage-container">
+      <Header title="마이페이지" />
       <h2>보유한 구독권</h2>
       <div>
         <span className="status-box">사용중</span>
-        <span className="discount-text">이번달 총 2만원 할인 혜택을 받으셨네요!</span>
+        <span className="discount-text">
+          이번달 총 2만원 할인 혜택을 받으셨네요!
+        </span>
       </div>
       <br />
-      <table className='info-box'>
+      <table className="info-box">
         <tbody>
           <tr>
             <td>사용자 이름</td>
@@ -95,10 +98,9 @@ const MyPage = () => {
             </tr>
           ))}
         </tbody>
-      </table> */}
+      </table>
     </div>
   );
-  
 };
 
 export default MyPage;
