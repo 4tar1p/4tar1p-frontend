@@ -1,4 +1,4 @@
-import { React } from 'react';
+import { React, useState } from 'react';
 import { useAppDispatch, useAppSelector } from 'app/hooks';
 import ProgressBar from 'components/ProgressBar';
 import RadiusRect from 'components/RadiusRect';
@@ -63,7 +63,24 @@ const Buying = () => {
     dispatch(clickedNextStep(step + 1));
   };
 
+  const [isClick, setIsClick] = useState(false);
+
+  const spanClassName = (className) => {
+    return className;
+  };
+
   const handlePay = () => {
+    setIsClick(true);
+    let totalCount = 0;
+    sportsList.forEach(sport => {
+      totalCount += sport.cnt;
+    });
+
+    if (totalCount != 10) {
+      spanClassName('countAlertMessage');
+      return;
+    }
+    spanClassName('countAlertMessage-hide');
     navigate('/buyingcompletion');
   };
 
@@ -116,6 +133,9 @@ const Buying = () => {
               return <SelectedSports key={i} sports={sportsList[i]} />;
             }
           })}
+          {isClick && <span className={spanClassName}>
+            *총 10회를 선택해주세요
+          </span>}
           <RadiusRect
             height="54px"
             backgroundColor="#6adfa0"
