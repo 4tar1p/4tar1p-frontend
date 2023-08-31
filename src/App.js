@@ -27,8 +27,11 @@ function App() {
       <Route path="/api" element={<ApiTest />} />
       <Route path="*" element={<NotFound />}></Route>
       <Route path="/buyingcompletion" element={<BuyingCompletion />}></Route>
-      <Route path="/reservationcompletion" element={<ReservationCompletion />}></Route>
-      <Route path="/mypage"element={<MyPage/>}></Route>
+      <Route
+        path="/reservationcompletion"
+        element={<ReservationCompletion />}
+      ></Route>
+      <Route path="/mypage" element={<MyPage />}></Route>
     </Routes>
   );
 }

@@ -28,14 +28,15 @@
 .cnt_btn {
   width: 20px;
   height: 20px;
+}
 
 button {
   display: inline-block;
-  background-color: #6ADFA0;
+  background-color: #6adfa0;
   padding: 5px 10px;
-  border-radius: 15px; 
-  color: white; 
-  font-weight: bold;  
-  border: none; 
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  border: none;
   font-size: 1.5em; /* 폰트 크기 H2랑 동일하게 */
 }

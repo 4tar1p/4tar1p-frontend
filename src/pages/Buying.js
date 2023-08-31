@@ -64,7 +64,7 @@ const Buying = () => {
   };
 
   const handlePay = () => {
-    navigate('/paying');
+    navigate('/buyingcompletion');
   };
 
   return (

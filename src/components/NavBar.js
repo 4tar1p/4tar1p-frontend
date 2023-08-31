@@ -14,7 +14,7 @@ const NavBar = ({ menuIdx }) => {
   const navigate = useNavigate();
 
   const handleClick = (type) => {
-    if (type === 'buying') navigate('/buyingcompletion');
+    if (type === 'buying') navigate('/buying');
     else if (type === 'reserve') navigate('/reservationcompletion');
     else if (type === 'mypage') navigate('/mypage');
   };
@@ -33,15 +33,9 @@ const NavBar = ({ menuIdx }) => {
         />
       )}
       {menuIdx === 1 ? (
-        <NavBtn
-          description="예약"
-          onClick={() => handleClick('reserve')}
-        />
+        <NavBtn description="예약" onClick={() => handleClick('reserve')} />
       ) : (
-        <NavBtn
-          description="예약"
-          onClick={() => handleClick('reserve')}
-        />
+        <NavBtn description="예약" onClick={() => handleClick('reserve')} />
       )}
       {menuIdx === 2 ? (
         <NavBtn
