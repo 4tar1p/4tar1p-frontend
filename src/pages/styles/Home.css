@@ -23,7 +23,7 @@
 .home_title {
   font-size: 20px;
   font-weight: var(--semibold);
-  margin: 20px auto 10px auto;
+  margin: 20px auto;
   white-space: pre-line;
 }
 
