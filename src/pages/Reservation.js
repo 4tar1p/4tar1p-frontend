@@ -27,21 +27,24 @@ const Reservation = () => {
   return (
     <div className="page">
       <Header title={'예약'} />
-
-      <Calendar onChange={onChange} value={value} />
-      <div className="title">날짜</div>
-      <div className="date">{moment(value).format('YYYY.MM.DD')}</div>
-      <div className="title">운동</div>
-      <div> 셀렉트박스 추가</div>
-      <div className="title">시간</div>
-      <div className="time_btn_wrapper">
-        {timeList.map((time, i) => {
-          return (
-            <RadiusRect key={i} width="100px">
-              <div>{time}</div>
-            </RadiusRect>
-          );
-        })}
+      <div className="calendar_wrapper">
+        <Calendar onChange={onChange} value={value} />
+      </div>
+      <div className="reservation_wrapper">
+        <div className="title">날짜</div>
+        <div className="date">{moment(value).format('YYYY.MM.DD')}</div>
+        <div className="title">운동</div>
+        <div> 셀렉트박스 추가</div>
+        <div className="title">시간</div>
+        <div className="time_btn_wrapper">
+          {timeList.map((time, i) => {
+            return (
+              <RadiusRect key={i} width="100px">
+                <div>{time}</div>
+              </RadiusRect>
+            );
+          })}
+        </div>
       </div>
       <RadiusRect
         height="54px"
