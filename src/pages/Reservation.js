@@ -5,6 +5,7 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import moment from 'moment';
 import RadiusRect from 'components/RadiusRect';
+import Header from 'components/Header';
 
 const Reservation = () => {
   const navigate = useNavigate();
@@ -25,6 +26,8 @@ const Reservation = () => {
 
   return (
     <div className="page">
+      <Header title={'예약'} />
+
       <Calendar onChange={onChange} value={value} />
       <div className="title">날짜</div>
       <div className="date">{moment(value).format('YYYY.MM.DD')}</div>
