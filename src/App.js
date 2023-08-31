@@ -7,8 +7,12 @@ import UI from 'pages/UI';
 import ApiTest from 'pages/ApiTest';
 import Buying from 'pages/Buying';
 import NotFound from 'pages/NotFound';
-import Reservation from 'pages/Reservation';
 import MyPage from 'pages/MyPage';
+import BuyingCompletion from 'pages/BuyingCompletion';
+import ReservationCompletion from 'pages/ReservationCompletion';
+import Reservation from 'pages/Reservation';
+import 'react-calendar/dist/Calendar.css';
+
 function App() {
   return (
     <Routes>
@@ -25,9 +29,11 @@ function App() {
       <Route path="/stay/:id/detail" element={<DetailStay />} /> */}
       <Route path="/ui" element={<UI />} />
       <Route path="/api" element={<ApiTest />} />
-      <Route path="/reservation" element={<Reservation />}></Route>
-      <Route path="/mypage" element={<MyPage />}></Route>
       <Route path="*" element={<NotFound />}></Route>
+      <Route path="/buyingcompletion" element={<BuyingCompletion />}></Route>
+      <Route path="/reservation" element={<Reservation />}></Route>
+      <Route path="/reservationcompletion" element={<ReservationCompletion />} ></Route>
+      <Route path="/mypage" element={<MyPage />}></Route>
     </Routes>
   );
 }

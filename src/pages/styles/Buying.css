@@ -39,7 +39,7 @@
   padding-right: 10px;
 }
 
-button {
+/* button {
   display: inline-block;
   background-color: #6adfa0;
   padding: 5px 10px;
@@ -48,15 +48,16 @@ button {
   font-weight: bold;
   border: none;
   font-size: 1.5em; /* 폰트 크기 H2랑 동일하게 */
-}
+/* } */
+*/
 
-select {
+/* select {
   padding: 10px;
   font-size: 1em;
   margin-top: 50px;
   margin-bottom: 10px;
   width: 100%;
-}
+} */
 
 .countAlertMessage {
   color: red;
@@ -75,4 +76,3 @@ select {
 .increase-decrease-count {
   display: inline-flex;
 }
-
