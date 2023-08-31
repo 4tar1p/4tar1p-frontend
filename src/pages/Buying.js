@@ -162,13 +162,8 @@ const Buying = () => {
       </div>
       <RadiusRect
         height="54px"
-<<<<<<< HEAD
-        backgroundColor="#609966"
-        color="white"
-=======
         backgroundColor={payButtonBackgroundColor}
         color={payButtonColor}
->>>>>>> feat/button-disable
         onClick={handlePay}
       >
         <div>결제</div>
