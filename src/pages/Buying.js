@@ -116,6 +116,14 @@ const Buying = () => {
   return (
     <div className="page">
       <Header title="이달의운세" />
+      <div className="progressTitle">지역을 선택해주세요!</div>
+      <div style={{padding:'0 10px'}}>
+      <select className="reservation_sports_wrapper">
+          {regionList.map((region, i) => {
+            return <option key={i} style={{}}>{region.name}</option>;
+          })}
+        </select>
+      </div>
       <div className="progressTitle">횟수를 선택해주세요!</div>
       <div className="sports_card_wrapper">
         {sportsList.map((sports, i) => {
