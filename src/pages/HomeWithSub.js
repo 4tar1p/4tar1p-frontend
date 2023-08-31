@@ -30,33 +30,34 @@ const HomeWithSub = () => {
         </RadiusRect>
         <div className="home_title">이런 헬스 컨텐츠는 어때요? 🏋️</div>
         {/* 헬스 컨텐츠 */}
-        <div style={{maxHeight:'700px', overflowY:'auto'}}>
-        <div className="health_contents_wrapper">
-          <CurationCard
-            size="m"
-            title={`운동 후 섭취하면 좋은 과일 알아보기`}
-            imgSrc={'/healthy_2_01.png'}
-            bgColor="#EFD5D5"
-          />
-          <CurationCard
-            size="m"
-            title={`요가로 거북목 치료하기`}
-            imgSrc={'/healthy_2_02.png'}
-            bgColor="#D9EFD5"
-          />
-          <CurationCard
-            size="m"
-            title={`운동 후 비타민 섭취가 필수인 이유`}
-            imgSrc={'/healthy_2_03.png'}
-            bgColor="#D5E3EF"
-          />
-          <CurationCard
-            size="m"
-            title={`화창한 날엔 야외로 나가요!\n야외 요가스팟 추천`}
-            imgSrc={'/healthy_2_04.png'}
-            bgColor="#CFBA92"
-          />
-        </div>
+        <div style={{ maxHeight: '700px', overflowY: 'auto' }}>
+          <div className="health_contents_wrapper">
+            <CurationCard
+              size="m"
+              title={`운동 후 섭취하면 좋은 과일 알아보기`}
+              imgSrc={'/healthy_2_01.png'}
+              bgColor="#EFD5D5"
+            />
+            <CurationCard
+              size="m"
+              title={`요가로 거북목 치료하기`}
+              imgSrc={'/healthy_2_02.png'}
+              bgColor="#D9EFD5"
+            />
+            <CurationCard
+              size="m"
+              title={`운동 후 비타민 섭취가 필수인 이유`}
+              imgSrc={'/healthy_2_03.png'}
+              bgColor="#D5E3EF"
+            />
+            <CurationCard
+              size="m"
+              title={`화창한 날엔 야외로 나가요!\n야외 요가스팟 추천`}
+              imgSrc={'/healthy_2_04.png'}
+              bgColor="#CFBA92"
+            />
+            <div style={{ marginBottom: '180px' }}></div>
+          </div>
         </div>
       </div>
     </div>
