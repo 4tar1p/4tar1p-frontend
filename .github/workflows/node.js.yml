@@ -9,6 +9,10 @@ on:
   # pull_request:
   #   branches: [ "main" ]
 
+env:
+  AWS_REGION: ap-northeast-2
+  S3_BUCKET_NAME: 4tar1p
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -39,22 +43,23 @@ jobs:
           rm -rf package-lock.json
           rm -rf yarn.lock
 
-      - name: 4. Build                   # React Build
-        run: | 
-          yarn
-          yarn build
+      - name: Install Dependencies
+        run: yarn
+  
+      - name: Build
+        run: yarn build
 
-      - name: 5. Deploy                  # Upload build file to S3
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: |
-          aws s3 cp --recursive --region ap-northeast-2 build s3://4tar1p-frontend-github-actions-s3-bucket
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
 
-      # 업로드한 s3 파일을 각 CDN 캐시 무효화하여 리프레시 하기
-      - name: 6. CloudFront Invalidation
-        env:
-          AWS_CLOUDFRONT_ID: ${{ secrets.AWS_CLOUDFRONT_ID}}
-        run: |
-          aws cloudfront create-invalidation \
-            --distribution-id $AWS_CLOUDFRONT_ID --paths "/*" 
+      - name: Deploy to S3
+        run: aws s3 sync build/ s3://${{ env.S3_BUCKET_NAME }} --delete
+
+      - name: Invalidate CloudFront Cache
+        run: aws cloudfront create-invalidation \
+          --distribution-id ${{secrets.AWS_CLOUDFRONT_ID}} --paths "/*"
+
