@@ -41,9 +41,10 @@ const MyPage = () => {
 
   return (
     <div className="myPage-container">
-      <h2>이용권 정보</h2>
+      <h2>보유한 구독권</h2>
       <div>
         <span className="status-box">사용중</span>
+        <span className="discount-text">이번달 총 2만원 할인 혜택을 받으셨네요!</span>
       </div>
       <br />
       <table className='info-box'>
