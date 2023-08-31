@@ -11,8 +11,7 @@ const BuyingCompletion = () => {
   };
 
   const handleReservation = () => {
-    // navigate('/reservation');
-    navigate('/ui');
+    navigate('/reservation');
   };
 
   return (
