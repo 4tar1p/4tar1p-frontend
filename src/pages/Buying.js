@@ -28,7 +28,7 @@ const SportsCard = ({ sports, calculateTotalPay }) => {
   };
 
   const handleDecrease = () => {
-    if (totalPrice <= 0) {
+    if (sports.cnt <= 0) {
       return;
     }
     dispatch(decreaseCnt(sports.id));
