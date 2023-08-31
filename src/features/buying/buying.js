@@ -140,6 +140,8 @@ const buyingSlice = createSlice({
       return {
         ...state,
         totalCount: 0,
+        totalOriginPrice: 0,
+        totalPrice: 0,
       };
     },
     setTotalPrice: (state, action) => {
@@ -154,6 +156,7 @@ const buyingSlice = createSlice({
         totalOriginPrice: state.totalOriginPrice + action.payload,
       };
     },
+
     setTotalCount: (state, action) => {
       return {
         ...state,
