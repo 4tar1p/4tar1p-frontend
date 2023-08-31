@@ -28,8 +28,8 @@ jobs:
       - name: 2. Check Node v            # Node v 확인
         run: node -v
 
-      - name: 3. Install Dependencies    # 의존 파일 설치
-        run: yarn install --frozen-lockfile
+      - name: 3. Install     
+        run: yarn
 
       - name: 4. Build                   # React Build
         run: yarn build
