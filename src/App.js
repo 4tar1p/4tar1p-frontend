@@ -5,6 +5,7 @@ import Home from 'pages/Home';
 import UI from 'pages/UI';
 import ApiTest from 'pages/ApiTest';
 import MyPage from './pages/MyPage';
+import ReservationCompletion from './pages/ReservationCompletion';
 
 const NotFound = React.lazy(() => import('./pages/NotFound'));
 
@@ -23,7 +24,8 @@ function App() {
       <Route path="/ui" element={<UI />} />
       <Route path="/api" element={<ApiTest />} />
       <Route path="*" element={<NotFound />}></Route>
-      <Route path="/mypage"element={<MyPage />} />
+      <Route path="/reservationcompletion" element={<ReservationCompletion />}></Route>
+      <Route path="/mypage"element={<MyPage/>}></Route>
     </Routes>
   );
 }
